@@ -1,0 +1,44 @@
+$color-gray: #777777
+$color-light-brown: #BA8554
+$color-dark-brown: #A14F03
+
+$color-black: #000000
+$color-white: #ffffff
+
+$box-shadow: (0px 10px 10px rgba(0, 0, 0, 0.3))
+$shadow-h2: (0rem, 1rem, 1rem, rgba($color-black, .75))
+
+$margin-vertical-big: 8rem
+$grid-width: 114rem
+$margin-horizontal: 6rem
+
+$font-size-paragrph: 1.6rem
+$font-size-h2: 3.6rem
+$font-size-h3: 2rem
+    
+@mixin style-link($color)
+    text-transform: uppercase
+    text-decoration: none
+    color: $color
+    display: inline-block
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+// phone, tab-port, tab-land, big-screen - размеры экрана
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and ( max-width: 600px )
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and ( max-width: 900px )
+            @content
+    @if $breakpoint == tab-land
+        @media only screen and ( max-width: 1240px )
+            @content
+    @if $breakpoint == big-screen
+        @media only screen and ( min-width: 1800px )
+            @content
+    

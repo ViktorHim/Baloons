@@ -1,0 +1,25 @@
+.nav-menu
+    &__list
+    &__link
+        &, &:link, &:visited
+            text-decoration: none
+            font-weight: 300
+            font-size: $font-size-paragrph
+            line-height: 1.9rem
+            letter-spacing: .2rem
+            color: $color-white
+            transition: .3s all
+        &:hover
+            color: $color-dark-brown
+    &__item
+        display: inline
+        &:not(:last-child)
+            margin-right: 5rem
+        @include respond(tab-land)
+            display: block
+            &:not(:last-child)
+                margin-right: 0rem
+                
+        @include respond(tab-port)
+                margin: 0
+                padding: 2rem

@@ -1,0 +1,21 @@
+.btn-text
+    &:link, &:visited
+        @include style-link($color-light-brown)
+        font-weight: 700
+        font-size: $font-size-paragrph
+        letter-spacing: .2rem
+        padding: 1rem
+        border-bottom: 1px solid $color-dark-brown
+        transition: all .5s
+        span
+            opacity: 0
+    &:hover
+        background: $color-light-brown
+        color: $color-white
+        box-shadow: $box-shadow
+        transform: translateY(-.5rem)
+        span
+            opacity: 1
+    &:active
+        transform: translateY(0rem)
+        box-shadow: none
